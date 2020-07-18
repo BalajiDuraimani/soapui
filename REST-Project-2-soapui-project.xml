@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="4cc7c25e-2e01-4896-96e8-4c47f2db3e8f" activeEnvironment="Default" name="REST Project 2" resourceRoot="" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="db82779b-1af1-4626-861c-4959ed70f43f" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://dev99369.service-now.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://dev99369.service-now.com</con:endpoint></con:endpoints><con:resource name="TableName" path="/api/now/table/{tableName}" id="c8fd5036-b995-4720-88bd-78965de6515a"><con:settings/><con:parameters><con:parameter><con:name>tableName</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="POST_createIncident" id="5ed193ff-e80a-4bdc-af64-12f5e63e9bdd" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>401 400</con:status><con:params/><con:element xmlns:spac="https://dev99369.service-now.com/api/now/table/Space1">spac:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:spac="https://dev99369.service-now.com/api/now/table/Space1">spac:Response</con:element></con:representation><con:request name="Request 1" id="b7eb16bc-8b20-42f4-a81a-63c58033fb3d" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://dev99369.service-now.com</con:endpoint><con:request>{"assigned_to":"balaji","approval":"admin"}</con:request><con:originalUri>https://dev99369.service-now.com/api/now/table/Space1</con:originalUri><con:credentials><con:username>admin</con:username><con:password>5OFtCOnugsM5</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="tableName" value="incident" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>tableName</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="2b36675c-7c91-4401-a46c-b35ce830b801" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://dev99369.service-now.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://dev99369.service-now.com</con:endpoint></con:endpoints><con:resource name="Sys_id" path="/api/now/table/{tableName}/{sys_id}" id="ef7069ec-7595-445a-9452-1a68f755b206"><con:settings/><con:parameters><con:parameter><con:name>tableName</con:name><con:value>tableName</con:value><con:style>TEMPLATE</con:style><con:default>tableName</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>sys_id</con:name><con:value>sys_id</con:value><con:style>TEMPLATE</con:style><con:default>sys_id</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET_tablenameandSysid" id="bc7e9c2d-12e7-468f-86dd-4cd1f1c399f3" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>401</con:status><con:params/><con:element xmlns:sys="https://dev99369.service-now.com/api/now/table/tableName/sys_id">sys:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:sys="https://dev99369.service-now.com/api/now/table/tableName/sys_id">sys:Response</con:element></con:representation><con:request name="Request 1" id="43d42b6d-3530-4cf8-8dce-16df2b0aa6dc" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://dev99369.service-now.com</con:endpoint><con:request/><con:originalUri>https://dev99369.service-now.com/api/now/table/tableName/sys_id</con:originalUri><con:credentials><con:username>admin</con:username><con:password>5OFtCOnugsM5</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="sys_id" value="cd6b910a2f0a1010303f56e62799b67b"/>
+  <con:entry key="tableName" value="incident"/>
+</con:parameters><con:parameterOrder><con:entry>tableName</con:entry><con:entry>sys_id</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="eafeb655-d9b6-4850-99d7-60c04e5ee784" name="ServicenowPOSTandGet"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="5cc4ce46-a00b-413d-97ba-9ca8c38bd7df" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ServiceNow_POSTandGET" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="SNow_Postaction" id="a6abd858-fa72-4f04-ad16-468e7c2e6d97"><con:settings/><con:config service="https://dev99369.service-now.com" resourcePath="/api/now/table/{tableName}" methodName="POST_createIncident" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="SNow_GETandPost" id="b7eb16bc-8b20-42f4-a81a-63c58033fb3d" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://dev99369.service-now.com</con:endpoint><con:request>{"assigned_to":"balaji","approval":"admin"}</con:request><con:originalUri>https://dev99369.service-now.com/api/now/table/Space1</con:originalUri><con:assertion type="Response SLA Assertion" id="78c758c0-f1a9-4bb3-bd08-9b4e2c459312" name="Response SLA"><con:configuration><SLA>1200</SLA></con:configuration></con:assertion><con:credentials><con:username>admin</con:username><con:password>5OFtCOnugsM5</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="tableName" value="incident" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>tableName</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="SNow_GetActionTablenameandsysid" id="22fec14a-d1f3-41e5-9f8b-b1a54ac2eff6"><con:settings/><con:config service="https://dev99369.service-now.com" resourcePath="/api/now/table/{tableName}/{sys_id}" methodName="GET_tablenameandSysid" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="SNow_Getbysysid" id="43d42b6d-3530-4cf8-8dce-16df2b0aa6dc" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://dev99369.service-now.com</con:endpoint><con:request/><con:originalUri>https://dev99369.service-now.com/api/now/table/tableName/sys_id</con:originalUri><con:assertion type="Response SLA Assertion" id="e1ce953c-a8f9-4ef1-b4df-316f0d2a138e" name="Response SLA"><con:configuration><SLA>800</SLA></con:configuration></con:assertion><con:credentials><con:username>admin</con:username><con:password>5OFtCOnugsM5</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="sys_id" value="${#Global#SysidVariable}"/>
+  <con:entry key="tableName" value="incident"/>
+</con:parameters><con:parameterOrder><con:entry>tableName</con:entry><con:entry>sys_id</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Groovy_PropertyTransferwithPostandGet" id="e6590cf3-da8b-41aa-98e8-938199841fb8"><con:settings/><con:config><script>import com.eviware.soapui.support.XmlHolder
+import com.eviware.soapui.impl.wsdl.testcase.WsdlTestRunContext
+import groovy.json.JsonSlurper
+
+//Run SNow_Postaction teststep
+PostActionExecutor = testRunner.testCase.testSteps["SNow_Postaction"]
+PostActionExecutor.run(testRunner,context)
+log.info PostActionExecutor
+log.info "Post Action has Run successfully"
+
+
+//Picking the JSON response and ripping the particular element we want, using Jsonslurper to first parse the JSON response and pick the variable by flowing through parent.child 
+//using the JSONeditor website 
+jsonresponse = context.expand('${SNow_Postaction#Response}')
+json = new JsonSlurper().parseText(jsonresponse)
+sysid=json.result.sys_id
+incidentnumber = json.result.number
+log.info sysid
+log.info incidentnumber
+
+
+//Globalvariable set 
+com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("SysidVariable",sysid)
+
+Getactionexecutor= testRunner.testCase.testSteps["SNow_GetActionTablenameandsysid"]
+Getactionexecutor.run(testRunner,context)
+log.info Getactionexecutor
+jsonresponse = context.expand('${SNow_GetActionTablenameandsysid#Response}')
+json = new JsonSlurper().parseText(jsonresponse)
+sysid=json.result.sys_id
+incidentnumber2 = json.result.number
+log.info sysid
+log.info incidentnumber2
+
+log.info "Get Action has Run successfully"
+
+
+
+</script></con:config></con:testStep><con:tearDownScript>
+// Code to execute the GenerateCSVReport test step
+testRunner.testCase.testSuite.project.testSuites["Library"].testCases["Reporting_Utility"].
+testSteps["GenerateHTMLReport"].run(testRunner, context);</con:tearDownScript><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="b8088805-7228-43f8-a438-fd4d5706e318" name="Library"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="59e55f65-c744-4684-85a0-d304f6f0075d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Reporting_Utility" searchProperties="true"><con:settings/><con:testStep type="groovy" name="GenerateCSVReport" id="3bb28d38-482e-4532-be9b-14b1d7d19030"><con:settings/><con:config><script>// 1. Create a "SoapUIResults" folder in the project path 
+      // Retrieve the project root folder
+      def projectPath = new com.eviware.soapui.support.GroovyUtils(context).projectPath
+      // Specify a folder inside project root to store the results
+      String folderPath = projectPath + "/SoapUIResults";
+      // Create a File object for the specified path
+      def resultFolder = new File(folderPath);
+      // Check for existence of folder and create a folder
+      if(!resultFolder.exists())
+      {
+        resultFolder.mkdirs();
+      }
+
+//   2. Create a subfolder (with timestamp) to store the request-response local copy 
+      // Retrieve the latest execution date-time
+      Date d = new Date();
+      def executionDate = d.format("dd-MMM-yyyy HH_mm");
+      // Specify the subfolder path with name Request-Response_CurrentTimeStamp
+      String subfolderPath1 = folderPath+ "/Request-Response_"+executionDate;
+      // Create this sub-folder
+      new File(subfolderPath1).mkdirs();
+
+ // 3. Create another subfolder "CSV Reports" to store the reports file 
+      // Specify the subfolder path with name CSV Reports
+      String subfolderPath2 = folderPath+ "/CSV Reports";
+      // Create this sub-folder
+      new File(subfolderPath2).mkdirs();
+
+ // 4. Create a Report.csv file inside the CSV Reports folder 
+      // Create a File object for Report csv file (with timestamp)
+      def reportFile = new File(subfolderPath2, "Report_"+executionDate+".csv");
+      // Check for existence of report file and create a file
+      if(!reportFile.exists())
+      {
+        reportFile.createNewFile();
+        // Create required column names in the report file
+        reportFile.write('"Test Suite","Test Case","Test Step","Step Type","Step Status",'
+                        +'"Result message","Execution Date"');
+      }
+
+
+      // 5. Inserting data in the file
+      // Iterate over all the test steps results
+  for(stepResult in testRunner.getResults())
+  {
+    // Retrieve Test Suite name
+   def testSuite = testRunner.testCase.testSuite.name;
+   // Retrieve Test Case name
+   def testCase = testRunner.testCase.name;
+   // Retrieve Test Step
+   def testStep = stepResult.getTestStep();
+   // Retrieve Test Step name
+   def testStepName = testStep.name
+   // Retrieve Test Step type
+   def type = testStep.config.type
+   // Retrieve Test Step status
+   def status = stepResult.getStatus()
+   // Creating new line in report file
+   reportFile.append('\n');
+   // Write all the necessary information in the file
+   reportFile.append('"' + testSuite + '",');
+   reportFile.append('"' + testCase + '",');
+   reportFile.append('"' + testStepName + '",');
+   reportFile.append('"' + type + '",');
+   reportFile.append('"' + status + '",');
+   // Retrieve the test result messages
+   reportFile.append('"');
+   for(resMessage in stepResult.getMessages())
+   {
+     // Write messages and separate multiple messages by new line
+     reportFile.append('Message:' + resMessage + '\n');
+   }
+   reportFile.append('",');
+   //Write executionDate in the file
+   reportFile.append('"' + executionDate + '",');
+ 
+
+/* ------------------------------------------------------------------------------- */
+
+// 6. Extract the request and response and save it to external file
+
+      // Verify if the test step type is request: SOAP project or restrequest: REST project
+
+        if((type=="request").or(type=="restrequest"))
+
+        {
+
+          // Extract the request from the test step
+
+          def extRequest = testStep.properties["Request"].value;    
+
+
+
+      // Create a file in the reports folder and write the request
+
+      // Naming convention: request_TestSuiteName_TestCaseName_TestStepName.txt
+
+      def requestFile=subfolderPath1+"/request_"+testSuite+"_"+testCase+"_"+testStepName+".txt";
+
+      def rqfile = new File(requestFile);
+
+      rqfile.write(extRequest, "UTF-8");
+
+
+
+      // Extract the response from the test step
+
+      def extResponse = stepResult.getResponseContent();    
+
+
+
+      // Create a file in the reports folder and write the response
+
+      // Naming convention: response_TestSuiteName_TestCaseName_TestStepName.txt
+
+      def responseFile=subfolderPath1+"/response_"+testSuite+"_"+testCase+"_"+testStepName+".txt";
+
+      def rsfile = new File(responseFile);
+
+      rsfile.write(extResponse, "UTF-8");
+
+     }
+
+
+ }</script></con:config></con:testStep><con:testStep type="groovy" name="GenerateHTMLReport" id="527b19f2-2896-483a-beb6-01453763e472"><con:settings/><con:config><script><![CDATA[HTMLReport.txt
+
+import org.apache.commons.io.FileUtils
+import java.io.IOException;
+//1. Create a "SoapUIResults" folder in the project path 
+      // Retrieve the project root folder
+      def projectPath = new com.eviware.soapui.support.GroovyUtils(context).projectPath
+      log.info(projectPath)
+      nse_component = testRunner.testCase.testSuite.project.name
+      // Specify a folder inside project root to store the results
+      String folderPath = projectPath + "/"+nse_component+"_SoapUIResults";
+      log.info(folderPath)
+      // Create a File object for the specified path
+      def resultFolder = new File(folderPath);
+      // Check for existence of folder and create a folder
+      if(!resultFolder.exists())
+      {
+        resultFolder.mkdirs();
+      }
+ //2. Create a subfolder (with timestamp) to store the request-response local copy 
+      // Retrieve the latest execution date-time
+      // Specify the subfolder path with name Request-Response_CurrentTimeStamp
+      String subfolderPath1 = folderPath+ "/Request-Response";
+      
+      // Create this sub-folder
+      new File(subfolderPath1).mkdirs();
+      context.testCase.testSuite.setPropertyValue("subfolderPath1",subfolderPath1)
+	 log.info(subfolderPath1)
+// 3. Create another subfolder "HTML Reports" to store the reports file 
+      // Specify the subfolder path with name CSV Reports
+      String subfolderPath2 = folderPath+ "/HTML Reports";
+      // Create this sub-folder
+      new File(subfolderPath2).mkdirs();
+      context.testCase.testSuite.setPropertyValue("subfolderPath2",subfolderPath2)
+ log.info(subfolderPath2)
+
+Date d = new Date();
+      def executionDate = d.format("dd-MMM-yyyy HH_mm");
+// 4. Create a Report.HTML file inside the HTML Reports folder 
+	def suite_name = context.testCase.testSuite.project.getPropertyValue("suite_name")
+      // Create a File object for Report csv file (with timestamp)
+      //def reportFile = new File(subfolderPath2,"Report_"+suite_name+".html");
+      def reportFile = new File(subfolderPath2,"Report"+suite_name+".html");
+       // Check for existence of report file and create a file
+      if(!reportFile.exists())
+      {
+        reportFile.createNewFile();
+        // Create required column names in the report file
+        reportFile.write("<html>" +
+           "<body>" +
+           "<h1>LS API Suite Test Results</h1>"+
+           "<table border="+1+">" +
+           "<tr>" +
+           "<th>Test Suite </th>" +
+           "<th>Test Case </th>" +
+           "<th>Test Step </th>" +
+           "<th>Step Type </th>" +
+           "<th>Status </th>" +
+           "<th>Execution Date </th>" +
+           "</tr>");
+      }
+
+ // 5. Inserting data in the file
+      // Iterate over all the test steps results
+  for(stepResult in testRunner.getResults())
+  {
+    // Retrieve Test Suite name
+   def testSuite = testRunner.testCase.testSuite.name;
+   // Retrieve Test Case name
+   def testCase = testRunner.testCase.name;
+   // Retrieve Test Step
+   def testStep = stepResult.getTestStep();
+   // Retrieve Test Step name
+   def testStepName = testStep.name
+   // Retrieve Test Step type
+   def type = testStep.config.type
+   // Retrieve Test Step status
+   def status = stepResult.getStatus()
+   def resmessage = stepResult.getMessages()
+   // Creating new line in report file
+   reportFile.append("<tr>"+
+   				 "<td>" + testSuite + "</td>"
+   				+"<td>" + testCase +  "</td>" 
+   				+"<td>" + testStepName + "</td>"
+   				+"<td>" + type + "</td>"
+   				+"<td>" + status + "</td>"
+   				+"<td>" + executionDate+ "</td>"
+   				//+"<td>" + resmessage+ "</td>"
+   				+"</tr>");
+ 	
+ 	
+/* ------------------------------------------------------------------------------- */
+
+// 6. Extract the request and response and save it to external file
+
+      // Verify if the test step type is request: SOAP project or restrequest: REST project
+	try{
+        if((type=="request").or(type=="restrequest"))
+
+        {
+
+          // Extract the request from the test step
+
+          def extRequest = testStep.properties["Request"].value;    
+
+
+
+      // Create a file in the reports folder and write the request
+
+      // Naming convention: request_TestSuiteName_TestCaseName_TestStepName.txt
+
+      def requestFile=subfolderPath1+"/request_"+testSuite+"_"+testCase+"_"+testStepName+".txt";
+
+      def rqfile = new File(requestFile);
+
+      rqfile.write(extRequest, "UTF-8");
+
+
+
+      // Extract the response from the test step
+
+      def extResponse = stepResult.getResponseContent();    
+
+
+
+      // Create a file in the reports folder and write the response
+
+      // Naming convention: response_TestSuiteName_TestCaseName_TestStepName.txt
+
+      def responseFile=subfolderPath1+"/response_"+testSuite+"_"+testCase+"_"+testStepName+".txt";
+
+      def rsfile = new File(responseFile);
+
+      rsfile.write(extResponse, "UTF-8");
+
+     }
+	 } catch(Exception e){
+		log.info(e.getMessage())
+	 }
+}
+reportFile= html]]></script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
